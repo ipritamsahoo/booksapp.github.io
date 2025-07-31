@@ -4,6 +4,7 @@ body {
   line-height: 1.5;
   color: #222;
   background: #fff;
+  padding-top: 110px; 
 }
 
 
@@ -12,10 +13,13 @@ header {
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: flex-end; 
-  padding: 1.2rem 2.5rem 1.2rem 2.5rem;
-  position: relative;
-  z-index: 10;
+  justify-content: flex-end;
+  padding: 1.2rem 2.5rem 1.2rem .5rem;
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .logo {
@@ -94,7 +98,7 @@ header nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.8rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0; /* Remove extra space below the grid */
 }
 .book-card {
   position: relative;
@@ -117,15 +121,17 @@ header nav {
   content: '';
   position: absolute;
   left: 50%;
-  top: 55px;
+  top: 110px;
   transform: translateX(-50%);
   width: 180px;
-  height: 140px;
+  height: 110px;
   background: #f7c99c;
-  border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
   z-index: 1;
   opacity: 0.7;
+  filter: blur(1px);
+  border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
 }
+
 .book-card h3 {
   margin: 0.7rem 0 0.2rem 0;
   font-size: 1.25rem;
@@ -168,7 +174,7 @@ footer {
   padding: 1.2rem 0 0.5rem 0;
   position: relative;
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem; /* Reduce space above footer */
   min-height: 30px;
 }
 footer .social {
@@ -212,6 +218,17 @@ footer .copyright {
   z-index: 2;
 }
 
+.load-lion-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 0; /* Remove extra space below */
+  position: relative;
+  gap: 1.5rem;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .book-grid {
@@ -239,3 +256,5 @@ footer .copyright {
     max-width: 400px;
   }
 }
+
+
