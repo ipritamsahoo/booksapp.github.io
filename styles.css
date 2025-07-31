@@ -7,7 +7,6 @@ body {
   padding-top: 110px; 
 }
 
-
 header {
   background: #205c3b;
   color: #fff;
@@ -32,7 +31,6 @@ header {
 }
 
 .logo img {
-  
   vertical-align: middle;
   border-radius: 50%;
   background: #fff;
@@ -54,26 +52,26 @@ nav a {
   font-size: 1.05rem;
   transition: color 0.2s;
 }
+
 nav a:hover {
   color: #f7c99c;
   text-decoration: underline;
 }
 
-/* Add left padding to header so nav doesn't overlap logo */
 header nav {
   margin-left: 100px;
 }
 
-/* Search Bar */
 .search-container {
   display: flex;
   justify-content: center;
   margin: 2.5rem 0 2.2rem 0;
   position: relative;
 }
+
 .search-container input {
   width: 420px;
-  padding: 1.1rem 2.5rem 1.1rem 3rem; /* left padding for icon */
+  padding: 1.1rem 2.5rem 1.1rem 3rem; 
   border-radius: 12px;
   border: none;
   box-shadow: 0 4px 24px rgba(0,0,0,0.13);
@@ -81,9 +79,10 @@ header nav {
   background: #fff;
   outline: none;
 }
+
 .search-icon {
   position: absolute;
-  left: calc(50% - 210px + 18px); /* aligns icon inside input's left side */
+  left: calc(50% - 210px + 18px); 
   top: 50%;
   transform: translateY(-50%);
   color: #205c3b;
@@ -92,14 +91,14 @@ header nav {
   z-index: 2;
 }
 
-/* Book Grid */
 .book-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.8rem;
-  margin-bottom: 0; /* Remove extra space below the grid */
+  margin-bottom: 0; 
 }
+
 .book-card {
   position: relative;
   background: none;
@@ -108,6 +107,7 @@ header nav {
   margin-bottom: 2rem;
   min-height: 320px;
 }
+
 .book-card img {
   position: relative;
   z-index: 2;
@@ -117,6 +117,7 @@ header nav {
   margin-bottom: 0.7rem;
   box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
+
 .book-card::before {
   content: '';
   position: absolute;
@@ -138,11 +139,13 @@ header nav {
   font-weight: bold;
   letter-spacing: 0.5px;
 }
+
 .book-card p {
   margin: 0;
   color: #444;
   font-size: 1.07rem;
 }
+
 .book-card .lang {
   color: #888;
   font-size: 1em;
@@ -150,7 +153,6 @@ header nav {
   margin-top: 0.2rem;
 }
 
-/* Load More */
 .load-more {
   display: block;
   text-align: center;
@@ -162,11 +164,12 @@ header nav {
   background: none;
   margin: 0 auto;
 }
+
 .load-more:hover {
   color: #f7c99c;
+  text-decoration: underline;
 }
 
-/* Footer */
 footer {
   background: #205c3b;
   color: #fff;
@@ -174,42 +177,68 @@ footer {
   padding: 1.2rem 0 0.5rem 0;
   position: relative;
   font-size: 1rem;
-  margin-top: 1rem; /* Reduce space above footer */
+  margin-top: 1rem; 
   min-height: 30px;
 }
+
 footer .social {
   position: absolute;
   left: 2rem;
-  bottom: 0.7rem;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
   margin-bottom: 0;
   text-align: left;
+  display: flex;
+  align-items: center;
 }
-footer .social a {
-  display: inline-block;
-  margin: 0 0.2rem;
+
+footer .social i {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: 
+    color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+  color: #205c3b;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+footer .social i:hover {
   color: #fff;
-  font-size: 1.3rem;
-  text-decoration: none;
-  vertical-align: middle;
+  background-color: #205c3b;
+  transform: scale(1.15);
 }
+
 footer .copyright {
   font-size: 1em;
   color: #e0e0e0;
   position: absolute;
   right: 2rem;
-  bottom: 0.7rem;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
   margin: 0;
   text-align: right;
 }
 
-/* Decorative SVGs */
-.lion-svg {
+.lion-img {
   width: 170px;
   opacity: 0.9;
   margin: 0;
   display: block;
 }
-.bird-svg {
+
+.bird-img {
   position: absolute;
   right: 0;
   top: 80px;
@@ -224,37 +253,10 @@ footer .copyright {
   justify-content: center;
   width: 100%;
   margin-top: 2rem;
-  margin-bottom: 0; /* Remove extra space below */
+  margin-bottom: 0; 
   position: relative;
   gap: 1.5rem;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .book-grid {
-    gap: 1.2rem;
-  }
-  .book-card {
-    width: 150px;
-    min-height: 250px;
-  }
-  .book-card img {
-    width: 100px;
-    height: 140px;
-  }
-  .book-card::before {
-    width: 120px;
-    height: 80px;
-    top: 35px;
-  }
-  .lion-svg, .bird-svg {
-    display: none;
-  }
-  .search-container input {
-    width: 90vw;
-    min-width: 180px;
-    max-width: 400px;
-  }
-}
 
 
