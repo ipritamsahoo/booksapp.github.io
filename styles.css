@@ -14,7 +14,7 @@ header {
   align-items: center;
   justify-content: flex-end;
   padding: 1.2rem 2.5rem 1.2rem .5rem;
-  position: fixed;      
+  position: absolute;      
   top: 0;
   left: 0;
   width: 100%;
